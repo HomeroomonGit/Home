@@ -10,8 +10,6 @@
     <h1>New homeroom</h1>
     <p>Better than never before created by yours truely ashton</p>
 
-
-
     <!-- Cloak button (top-right corner) -->
     <button id="cloakButton">Cloak</button>
 
@@ -36,6 +34,14 @@
         <button onclick="window.location.href='https://defscience.com'">Def Science</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Cloak button functionality to change the tab title
+        document.getElementById('cloakButton').addEventListener('click', function() {
+            let newTitle = prompt("Enter a new tab name:");
+            if (newTitle) {
+                document.title = newTitle;
+            }
+        });
+    </script>
 </body>
 </html>
