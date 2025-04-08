@@ -1,13 +1,7 @@
-document.getElementById('clickButton').addEventListener('click', function() {
-    alert('Button clicked!');
-});
-
-document.getElementById('cloakButton').addEventListener('click', function() {
-    // Use the prompt function to ask for a new tab name
-    const newTabName = prompt("Enter the new tab name:");
-
-    // If the user entered a non-empty value, change the tab title
-    if (newTabName && newTabName.trim() !== "") {
-        document.title = newTabName;
+// Cloak button functionality to change the tab title
+document.querySelector(".cloaker").addEventListener("click", function() {
+    let newTitle = prompt("Enter a new tab name:");
+    if (newTitle) {
+        document.title = newTitle;
     }
 });
