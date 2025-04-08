@@ -21,7 +21,8 @@
 
     <!-- Game/Website Buttons -->
     <div id="gameButtons">
-        <button onclick="window.location.href='https://www.driveMad.com'">Drive Mad</button>
+        <!-- Modify this button to execute the script when clicked -->
+        <button onclick="openGame()">Drive Mad</button>
         <button onclick="window.location.href='https://slither.io'">Slope</button>
         <button onclick="window.location.href='https://www.retrobowlgame.com'">Retro Bowl</button>
         <button onclick="window.location.href='https://www.socoolgames.com'">Socoolgames</button>
@@ -42,6 +43,13 @@
                 document.title = newTitle;
             }
         });
+
+        // Function to open Drive Mad in a new window with an iframe
+        function openGame() {
+            var win = window.open("about:blank", "_blank");
+            win.document.write('<html><head><title>Drive Mad</title></head><body style="margin:0;padding:0;height:100vh;"><iframe src="https://ubg77.github.io/game131022/drive-mad/" style="border:none;width:100%;height:100%;"></iframe></body></html>');
+            win.document.close();
+        }
     </script>
 </body>
 </html>
